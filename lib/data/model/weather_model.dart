@@ -1,0 +1,30 @@
+class WeatherModel {
+  String cityName;
+  String date;
+  String image;
+  double temp;
+  double maxTemp;
+  double manTemp;
+  String weatherCondition;
+  WeatherModel({
+    required this.cityName,
+    required this.date,
+    required this.image,
+    required this.temp,
+    required this.maxTemp,
+    required this.manTemp,
+    required this.weatherCondition,
+  });
+
+  factory WeatherModel.fromJson(Map<String, dynamic> json) {
+    return WeatherModel(
+      cityName: json["location"]["name"],
+      date: json["current"]["last_updated"],
+      temp: json["forecast"]["forecastday"][0]["day"]["avgtemp_c"],
+      maxTemp: json["forecast"]["forecastday"][0]["day"]["maxtemp_c"],
+      manTemp: json["forecast"]["forecastday"][0]["day"]["mintemp_c"],
+      weatherCondition:json["forecast"]["forecastday"][0]["day"]["condition"]["text"],
+      image: json["forecast"]["forecastday"][0]["day"]["condition"]["icon"],
+    );
+  }
+}
