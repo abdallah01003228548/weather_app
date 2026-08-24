@@ -1,6 +1,6 @@
-
 import 'package:flutter/material.dart';
-
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:weather_app/cubits/get_weather_cubit/get_weather_cubit.dart';
 
 class SearchView extends StatefulWidget {
   const SearchView({super.key});
@@ -23,6 +23,8 @@ class _SearchViewState extends State<SearchView> {
         child: Center(
           child: TextField(
             onSubmitted: (value) {
+              var getWeatherCubit = BlocProvider.of<GetWeatherCubit>(context);
+              getWeatherCubit.getWeather(cityName: value);
               Navigator.pop(context);
             },
             decoration: InputDecoration(
