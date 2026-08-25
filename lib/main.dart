@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:weather_app/cubits/get_weather_cubit/get_weather_cubit.dart';
+import 'package:weather_app/logic/get_matrialcolor_of_conditional_day.dart';
 import 'package:weather_app/pages/home_view.dart';
 
 void main() {
@@ -29,7 +30,7 @@ class CustomMatrialApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-     // theme: ThemeData(primarySwatch: getWeatherColor(BlocProvider.of<GetWeatherCubit>(context).weatherModel.weatherCondition)),
+      theme: ThemeData(primarySwatch: getWeatherColor(BlocProvider.of<GetWeatherCubit>(context).weatherModel.weatherCondition)),
       home: HomeScreen(),
     );
   }
