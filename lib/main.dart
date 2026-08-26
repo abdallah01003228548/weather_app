@@ -30,7 +30,7 @@ class CustomMatrialApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(primarySwatch: getWeatherColor(BlocProvider.of<GetWeatherCubit>(context).weatherModel.weatherCondition)),
+      theme: ThemeData(primarySwatch: getWeatherColor(BlocProvider.of<GetWeatherCubit>(context).weatherModel?.weatherCondition)),
       home: HomeScreen(),
     );
   }

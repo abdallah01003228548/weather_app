@@ -10,11 +10,10 @@ class WeatherInfo extends StatelessWidget {
   Widget build(BuildContext context) {
     WeatherModel weatherModel = BlocProvider.of<GetWeatherCubit>(
       context,
-    ).weatherModel;
+    ).weatherModel!;
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
-
         children: [
           Text(
             weatherModel.cityName,

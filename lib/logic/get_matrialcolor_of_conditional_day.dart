@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 
-MaterialColor getWeatherColor(String day) {
-  switch (day.toLowerCase()) {
+MaterialColor getWeatherColor(String ? day) {
+  if(day == null){
+    return Colors.blue;
+  }
+  switch (day) {
     case 'sunny':
       return Colors.orange;
 
