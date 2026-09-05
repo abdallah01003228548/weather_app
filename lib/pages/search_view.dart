@@ -15,7 +15,6 @@ class _SearchViewState extends State<SearchView> {
     return Scaffold(
       appBar: AppBar(
         iconTheme: IconThemeData(color: Colors.white),
-        backgroundColor: Color(0Xff277EC0),
         title: Text('Search a City', style: TextStyle(color: Colors.white)),
       ),
       body: Padding(

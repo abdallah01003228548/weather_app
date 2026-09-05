@@ -7,7 +7,7 @@ import 'package:weather_app/pages/search_view.dart';
 import 'package:weather_app/widgets/weather_info.dart';
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen({super.key});
+  const HomeScreen({super.key});
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -19,7 +19,6 @@ class _HomeScreenState extends State<HomeScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Weather App", style: TextStyle(color: Colors.white)),
-        backgroundColor: Color(0Xff277EC0),
         actions: [
           IconButton(
             onPressed: () {

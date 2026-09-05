@@ -4,7 +4,7 @@ MaterialColor getWeatherColor(String ? day) {
   if(day == null){
     return Colors.blue;
   }
-  switch (day) {
+  switch (day.toLowerCase()) {
     case 'sunny':
       return Colors.orange;
 

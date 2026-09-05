@@ -3,7 +3,7 @@ import 'package:weather_app/data/model/weather_model.dart';
 import 'package:weather_app/data/service/api/api_constants.dart';
 
 class WeatherService {
-  final dio;
+  final Dio dio;
   WeatherService(this.dio);
 
   Future<WeatherModel> getWeather({required String cityName}) async {
